@@ -7,9 +7,7 @@
 <div class="container-fluid main">
 	<div class="row-fluid">
 		<div class="span10 offset1">
-			<h1> Today is  saturday</h1>
-			<h1> TS-6 Wishing you all the best for the CJE</h1>
-			<h1> India is my country</h1>
+			<h1> Homecoming</h1>
 			<div>
 				<p class="well">
 					<security:authorize access="hasRole('ROLE_USER')">
