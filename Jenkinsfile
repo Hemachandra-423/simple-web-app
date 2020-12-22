@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ( 'Git Clone') {
       steps {
-      git  'httpsgithub.comHemachandra-423simple-web-app.git'
+      git  'https://github.com/Hemachandra-423/simple-web-app.git'
       }
     }
     stage ( 'Maven Build') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage ( 'deploy') {
       steps {
-        deploy adapters [tomcat8(credentialsId '07f9e9cb-69c1-4080-987d-3399d4e9ae3a', path '', url 'httplocalhost9595')], contextPath 'simple-web-app', war '.war'  
+        deploy adapters: [tomcat8(credentialsId: '07f9e9cb-69c1-4080-987d-3399d4e9ae3a', path: '', url: 'http://localhost:9595')], contextPath: '/simple-web-app', war: '**/*.war'  
 		}
   }
 }
